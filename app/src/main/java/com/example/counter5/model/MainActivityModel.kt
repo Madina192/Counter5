@@ -1,6 +1,6 @@
 package com.example.counter5.model
 
-class CounterModel {
+class MainActivityModel {
     var number = 0
     var isDark = false
 
@@ -9,7 +9,7 @@ class CounterModel {
     }
 
     fun decrease() {
-        if (number >= 0) {
+        if (number > 0) {
             number--
         }
     }
