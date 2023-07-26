@@ -9,20 +9,16 @@ class MainViewModel : ViewModel() {
     var isDark = MutableLiveData<Boolean>(false)
 
     fun increase() {
-        number.postValue(number.value!!+1)
+        number.postValue(number.value!! + 1)
     }
 
     fun decrease() {
         if (number.value!! > 0) {
-            number.postValue(number.value!!-1)
+            number.postValue(number.value!! - 1)
         }
     }
 
-    fun changeLightToDark(){
-        isDark.postValue(true)
-    }
-
-    fun changeDarkToLight(){
-        isDark.postValue(false)
+    fun changeBooleanState() {
+        isDark.value = !isDark.value!!
     }
 }
